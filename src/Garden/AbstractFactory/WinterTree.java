@@ -1,4 +1,4 @@
-package AbstractFactory;
+package Garden.AbstractFactory;
 
 public class WinterTree implements Tree {
 

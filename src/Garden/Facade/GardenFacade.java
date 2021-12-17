@@ -1,9 +1,9 @@
-package Facade;
+package Garden.Facade;
 
 import Garden.AnimalsDecorator;
 
 /**
- * A Facade class can often be transformed into a Singleton
+ * A Garden.Facade class can often be transformed into a Singleton
  * since a single facade object is sufficient in most cases.
  */
 

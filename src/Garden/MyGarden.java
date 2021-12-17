@@ -7,12 +7,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class GardenSimulator extends Application {
+public class MyGarden extends Application {
 
     private FXMLLoader loader;
 
     public static void main(String[] args) {
-        launch(args);
+
+
+
+        //launch(args);
     }
 
     @Override
