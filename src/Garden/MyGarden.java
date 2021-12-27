@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 public class MyGarden extends Application {
 
     private FXMLLoader loader;
+    private MyGarden myGarden;
 
     public static void main(String[] args) {
 
