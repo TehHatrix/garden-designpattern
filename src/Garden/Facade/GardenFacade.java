@@ -32,6 +32,5 @@ public class GardenFacade {
      */
     public GardenFacade(AnimalsDecorator animalsDecorator) {
         this.animalsDecorator = animalsDecorator;
-
     }
 }
