@@ -15,7 +15,7 @@ public class MyGarden extends Application {
 
 
 
-        //launch(args);
+        launch(args);
     }
 
     @Override
