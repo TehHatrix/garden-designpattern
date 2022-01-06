@@ -1,4 +1,4 @@
-package AbstractFactory;
+package Garden.AbstractFactory;
 
 import java.util.Scanner;
 
