@@ -42,7 +42,6 @@ public class MainController {
 
         settingsButton.setOnAction((actionEvent -> {
             Stage settingsWindow = new Stage();
-
             settingsWindow.setTitle("Settings");
             settingsWindow.show();
         }));

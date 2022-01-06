@@ -29,7 +29,7 @@
                </StackPane.margin>
             </ImageView>
          </children></StackPane>
-      <HBox alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="600.0" style="-fx-padding: 12;">
+      <HBox alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="600.0" style="-fx-padding: 12; -fx-background-color: grey;">
          <children>
             <Button fx:id="settingsButton" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Settings" />
          </children>
