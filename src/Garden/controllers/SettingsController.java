@@ -14,7 +14,7 @@ public class SettingsController {
     private MainController mainController;
 
     @FXML
-    private ChoiceBox seasonDropdown, animalDropdown, animalStripeDropdown;
+    private ChoiceBox seasonDropdown, animalDropdown, animalStripeDropdown, animalBehaviorDropdown;
 
     @FXML
     private CheckBox treeCheckBox, animalCheckBox;
@@ -41,11 +41,35 @@ public class SettingsController {
         animalStripeDropdown.setValue(settings.getChosenAnimalStripe());
         treeCheckBox.setSelected(settings.isDisplayTree());
         animalCheckBox.setSelected(settings.isDisplayAnimal());
+        animalBehaviorDropdown.setValue(settings.getDefaultAnimalBehavior());
 
         // Set all settings item
         seasonDropdown.setItems(FXCollections.observableArrayList(settings.seasons));
         animalDropdown.setItems(FXCollections.observableArrayList(settings.animals));
         animalStripeDropdown.setItems(FXCollections.observableArrayList(settings.animalStripe));
+        animalBehaviorDropdown.setItems(FXCollections.observableArrayList(settings.animalBehavior));
+
+        if(animalDropdown.getValue() == "Cat"){
+            animalBehaviorDropdown.setItems(FXCollections.observableArrayList(settings.animalBehavior));
+            animalBehaviorDropdown.getItems().remove("Fly");
+            animalBehaviorDropdown.setValue("Sit");
+        } else if(animalDropdown.getValue() == "Bird"){
+            animalBehaviorDropdown.setItems(FXCollections.observableArrayList(settings.animalBehavior));
+            animalBehaviorDropdown.getItems().remove("Walk");
+            animalBehaviorDropdown.setValue("Sit");
+        }
+
+        animalDropdown.setOnAction(event -> {
+            if(animalDropdown.getValue() == "Cat"){
+                animalBehaviorDropdown.setItems(FXCollections.observableArrayList(settings.animalBehavior));
+                animalBehaviorDropdown.getItems().remove("Fly");
+                animalBehaviorDropdown.setValue("Sit");
+            } else if(animalDropdown.getValue() == "Bird"){
+                animalBehaviorDropdown.setItems(FXCollections.observableArrayList(settings.animalBehavior));
+                animalBehaviorDropdown.getItems().remove("Walk");
+                animalBehaviorDropdown.setValue("Sit");
+            }
+        });
 
         // Buttons
         resetButton.setOnAction(actionEvent -> {

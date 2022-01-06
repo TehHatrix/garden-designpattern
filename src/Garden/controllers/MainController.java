@@ -70,9 +70,11 @@ public class MainController {
         System.out.println("Season : " + settings.getChosenSeason());
         System.out.println("Animal : " + settings.getChosenAnimal());
         System.out.println("AnimalStripe : " + settings.getChosenAnimalStripe());
+        System.out.println("AnimalBehavior : " + settings.getChosenAnimalBehavior());
         System.out.println("Show tree? : " + settings.isDisplayTree());
         System.out.println("Show animal? : " + settings.isDisplayAnimal());
 
         // Call facade to collect all the images
+
     }
 }
