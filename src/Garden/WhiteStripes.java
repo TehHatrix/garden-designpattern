@@ -1,8 +1,8 @@
 package Garden;
 import javafx.scene.image.Image;
 
-public class DarkBlackStripes extends AnimalsDecorator {
-    public DarkBlackStripes(Animal animals){
+public class WhiteStripes extends AnimalsDecorator {
+    public WhiteStripes(Animal animals){
         this.animals = animals;
     }
     @Override
@@ -12,11 +12,10 @@ public class DarkBlackStripes extends AnimalsDecorator {
 
     @Override
     public String color() {
-        return animals.color() + " color and Dark Black Stripes";
+        return animals.color() + " color and White Stripes";
     }
 
     public Image image() {
-        return new Image(getClass().getResourceAsStream("animals/blackstripe/black-stripe.png"));
+        return null;
     }
-
 }

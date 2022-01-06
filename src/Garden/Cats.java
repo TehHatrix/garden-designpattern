@@ -1,5 +1,7 @@
 package Garden;
 
+import javafx.scene.image.Image;
+
 public class Cats extends Animal {
     public Cats(){
         description = "Cats";
@@ -7,6 +9,10 @@ public class Cats extends Animal {
     }
     @Override
     public String color() {
-        return null;
+        return "Orange";
+    }
+
+    public Image Image() {
+        return new Image(getClass().getResourceAsStream("animals/bird/orange-cat.png"));
     }
 }

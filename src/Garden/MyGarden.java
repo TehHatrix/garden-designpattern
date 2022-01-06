@@ -12,9 +12,6 @@ public class MyGarden extends Application {
     private FXMLLoader loader;
 
     public static void main(String[] args) {
-
-
-
         launch(args);
     }
 
