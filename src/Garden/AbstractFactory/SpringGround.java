@@ -1,10 +1,12 @@
 package Garden.AbstractFactory;
 
+import javafx.scene.image.Image;
+
 public class SpringGround implements Ground {
 
 	@Override
-	public String showGround() {
-		return "SpringGround.png";
+	public Image showGround() {
+		return new Image(getClass().getResourceAsStream("/Garden/controllers/seasons/spring/ground.png"));
 	}
 
 }

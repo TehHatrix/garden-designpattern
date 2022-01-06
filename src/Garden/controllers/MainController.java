@@ -1,5 +1,9 @@
 package Garden.controllers;
 
+import Garden.AbstractFactory.AutumnFactory;
+import Garden.AbstractFactory.SeasonFactory;
+import Garden.AbstractFactory.SpringFactory;
+import Garden.AbstractFactory.WinterFactory;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -32,9 +36,16 @@ public class MainController {
     @FXML
     public void initialize() {
         // Load default images
+
+        SeasonFactory seasonFactory = null;
+        seasonFactory =
+                new AutumnFactory();
+//                new WinterFactory();
+
+
         Image backgroundImg = new Image(getClass().getResourceAsStream("seasons/background.jpg"));
-        Image treeImg = new Image(getClass().getResourceAsStream("seasons/autumn/tree.png"));
-        Image groundImg = new Image(getClass().getResourceAsStream("seasons/autumn/ground.png"));
+        Image treeImg = seasonFactory.createTree().showTree();
+        Image groundImg = seasonFactory.createGround().showGround();
 
         background.setImage(backgroundImg);
         tree.setImage(treeImg);

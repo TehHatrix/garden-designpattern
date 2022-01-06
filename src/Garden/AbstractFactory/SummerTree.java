@@ -1,10 +1,12 @@
 package Garden.AbstractFactory;
 
+import javafx.scene.image.Image;
+
 public class SummerTree implements Tree {
 
 	@Override
-	public String showTree() {
-		return "SummerTree.png";
+	public Image showTree() {
+		return new Image(getClass().getResourceAsStream("/Garden/controllers/seasons/summer/tree.png"));
 	}
 
 }
