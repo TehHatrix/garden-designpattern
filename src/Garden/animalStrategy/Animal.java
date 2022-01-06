@@ -1,4 +1,4 @@
-package Garden;
+package Garden.animalStrategy;
 
 public abstract class Animal {
     String description = "Unknown Animals";

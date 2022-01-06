@@ -1,9 +1,9 @@
 package Garden.controllers;
 
+import Garden.GardenFacade;
 import Garden.SettingsSingleton;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -11,7 +11,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 
 public class MainController {
@@ -27,15 +26,17 @@ public class MainController {
     @FXML
     private ImageView tree;
     @FXML
-    private ImageView cat;
+    private ImageView animalGround;
     @FXML
-    private ImageView bird;
+    private ImageView animalFly;
 
     // Settings layout vars
     private FXMLLoader layoutLoader;
 
     // Settings instance
     private SettingsSingleton settings;
+
+    private GardenFacade gardenFacade;
 
     public MainController() {
         settings = SettingsSingleton.getInstance();
@@ -75,6 +76,21 @@ public class MainController {
         System.out.println("Show animal? : " + settings.isDisplayAnimal());
 
         // Call facade to collect all the images
+        gardenFacade = new GardenFacade(settings.getChosenSeason());
+
+        // Use images
+        if(settings.isDisplayTree()) {
+            tree.setImage(gardenFacade.showTree());
+            tree.setVisible(true);
+        } else {
+            tree.setVisible(false);
+        }
+        ground.setImage(gardenFacade.showGround());
+
+        // TODO: Pras
+        if(settings.isDisplayAnimal()) {
+        } else {
+        }
 
     }
 }

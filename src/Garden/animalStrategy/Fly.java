@@ -1,4 +1,4 @@
-package Garden;
+package Garden.animalStrategy;
 
 public class Fly implements MoveBehaviour {
 

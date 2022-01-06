@@ -1,4 +1,4 @@
-package Garden;
+package Garden.animalStrategy;
 
 import javafx.scene.image.Image;
 

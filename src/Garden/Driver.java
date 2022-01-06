@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MyGarden extends Application {
+public class Driver extends Application {
 
     private FXMLLoader loader;
 

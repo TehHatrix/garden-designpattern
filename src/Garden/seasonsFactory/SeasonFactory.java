@@ -1,4 +1,4 @@
-package Garden.AbstractFactory;
+package Garden.seasonsFactory;
 
 public interface SeasonFactory {
 	public Ground createGround();

@@ -1,4 +1,5 @@
-package Garden;
+package Garden.animalDecorator;
+import Garden.animalStrategy.Animal;
 import javafx.scene.image.Image;
 
 public class WhiteStripes extends AnimalsDecorator {

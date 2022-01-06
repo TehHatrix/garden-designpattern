@@ -1,4 +1,4 @@
-package Garden.AbstractFactory;
+package Garden.seasonsFactory;
 
 import javafx.scene.image.Image;
 public class AutumnTree implements Tree {
