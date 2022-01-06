@@ -13,7 +13,7 @@ public class Birds extends Animal{
     }
 
     public Image Image() {
-        return new Image(getClass().getResourceAsStream("animals/bird/orange-bird.png"));
+        return new Image(getClass().getResourceAsStream("animals/bird/bird-fly.png"));
     }
 
 }
