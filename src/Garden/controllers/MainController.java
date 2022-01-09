@@ -2,6 +2,9 @@ package Garden.controllers;
 
 import Garden.GardenFacade;
 import Garden.SettingsSingleton;
+import Garden.animalStrategy.Fly;
+import Garden.animalStrategy.Sit;
+import Garden.animalStrategy.Walk;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -79,7 +82,7 @@ public class MainController {
         gardenFacade = new GardenFacade(settings.getChosenSeason());
 
         // Use images
-        if(settings.isDisplayTree()) {
+        if (settings.isDisplayTree()) {
             tree.setImage(gardenFacade.showTree());
             tree.setVisible(true);
         } else {
@@ -87,9 +90,32 @@ public class MainController {
         }
         ground.setImage(gardenFacade.showGround());
 
-        // TODO: Pras
-        if(settings.isDisplayAnimal()) {
+        // TODO: Pras --> Animal Image
+        if (settings.isDisplayAnimal()) {
+
+            gardenFacade.setAnimal(settings.getChosenAnimal(), settings.getChosenAnimalBehavior());
+
+/*
+            gardenFacade.setAnimalMovingBehavior(new Sit());
+            if (gardenFacade.getAnimal() != null) {
+                String mb = settings.getChosenAnimalBehavior();
+
+                if (mb.equals("Sit")) {
+                    gardenFacade.setAnimalMovingBehavior(new Sit());
+                }
+                if (mb.equals("Walk")) {
+                    gardenFacade.setAnimalMovingBehavior(new Walk());
+                } else {
+                    gardenFacade.setAnimalMovingBehavior(new Fly());
+                }
+            }
+*/
+
+            animalGround.setImage(gardenFacade.getAnimal().getImage());
+
+            animalGround.setVisible(true);
         } else {
+            animalGround.setVisible(false);
         }
 
     }

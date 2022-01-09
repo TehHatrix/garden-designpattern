@@ -1,5 +1,5 @@
 package Garden.animalStrategy;
 
 public interface MoveBehaviour {
-    public void move();
+    public String move();
 }

@@ -7,7 +7,7 @@ public class SettingsSingleton {
     public String[] seasons = {"Spring","Summer","Winter","Autumn"};
     public String[] animals = {"Cat","Bird"};
     public String[] animalStripe = {"None","Black","White"};
-    public String[] animalBehavior = {"Sit","Walk", "Fly"};
+    public String[] animalBehavior = {"Sit","Walk","Fly"};
 
     private String defaultSeason = "Spring";
     private String defaultAnimal = "Cat";
@@ -94,16 +94,15 @@ public class SettingsSingleton {
         return defaultDisplayAnimal;
     }
 
-
     public String getDefaultAnimalBehavior() {
         return defaultAnimalBehavior;
     }
 
-    public static String getChosenAnimalBehavior() {
+    public String getChosenAnimalBehavior() {
         return chosenAnimalBehavior;
     }
 
-    public static void setChosenAnimalBehavior(String chosenAnimalBehavior) {
-        SettingsSingleton.chosenAnimalBehavior = chosenAnimalBehavior;
+    public void setChosenAnimalBehavior(String chosenAnimalBehavior) {
+        this.chosenAnimalBehavior = chosenAnimalBehavior;
     }
 }

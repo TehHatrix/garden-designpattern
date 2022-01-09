@@ -24,3 +24,5 @@
 *.iml
 hs_err_pid*
 /bin/
+
+module-info.java
