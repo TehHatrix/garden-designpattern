@@ -1,4 +1,6 @@
-package Garden;
+package Garden.animalDecorator;
+import Garden.animalStrategy.Animal;
+import javafx.scene.image.Image;
 
 public class DarkBlackStripes extends AnimalsDecorator {
     public DarkBlackStripes(Animal animals){
@@ -11,7 +13,11 @@ public class DarkBlackStripes extends AnimalsDecorator {
 
     @Override
     public String color() {
-        return "Dark Black Stripes";
+        return animals.color() + " color and Dark Black Stripes";
+    }
+
+    public Image image() {
+        return new Image(getClass().getResourceAsStream("animals/blackstripe/black-stripe.png"));
     }
 
 }
