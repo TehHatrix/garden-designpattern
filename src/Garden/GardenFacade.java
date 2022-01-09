@@ -1,10 +1,7 @@
 package Garden;
 
 import Garden.animalDecorator.AnimalsDecorator;
-import Garden.animalStrategy.Animal;
-import Garden.animalStrategy.Birds;
-import Garden.animalStrategy.Cats;
-import Garden.animalStrategy.MoveBehaviour;
+import Garden.animalStrategy.*;
 import Garden.seasonsFactory.*;
 import javafx.scene.image.Image;
 
@@ -66,6 +63,7 @@ public class GardenFacade {
             case "Cat" -> this.animal = cat;
             case "Bird" -> this.animal = bird;
         }
+
         System.out.println(animal);
     }
 
@@ -80,7 +78,6 @@ public class GardenFacade {
     public void setAnimalMovingBehavior(MoveBehaviour moveBehaviour) {
         this.animal.setMoveBehaviour(moveBehaviour);
     }
-
 
     public Animal getAnimal() {
         return animal;

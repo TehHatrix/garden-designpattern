@@ -8,7 +8,6 @@ public class Birds extends Animal {
      * I am passing the
      * @param mb in GardenFacade class method setAnimal()
      */
-
     public Birds(String mb) {
         description = "Birds";
         setMb(mb); /* This used to set manually in the previous code version */
