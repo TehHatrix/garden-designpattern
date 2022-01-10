@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" VBox.vgrow="NEVER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Season">
+               <HBox.margin>
+                  <Insets right="24.0" />
+               </HBox.margin>
+            </Text>
+            <ChoiceBox fx:id="seasonDropdown" prefWidth="150.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <CheckBox fx:id="treeCheckBox" mnemonicParsing="false" text="Show Seasonal Tree">
+               <HBox.margin>
+                  <Insets left="24.0" right="24.0" />
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="animalCheckBox" mnemonicParsing="false" text="Show Animal">
+               <HBox.margin>
+                  <Insets left="24.0" right="24.0" />
+               </HBox.margin>
+            </CheckBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Animal">
+               <HBox.margin>
+                  <Insets right="24.0" />
+               </HBox.margin>
+            </Text>
+            <ChoiceBox fx:id="animalDropdown" prefWidth="150.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Color">
+               <HBox.margin>
+                  <Insets right="24.0" />
+               </HBox.margin>
+            </Text>
+            <ChoiceBox fx:id="animalStripeDropdown" prefWidth="150.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Moving Behavior">
+               <HBox.margin>
+                  <Insets right="24.0" />
+               </HBox.margin>
+            </Text>
+            <ChoiceBox fx:id="animalBehaviorDropdown" prefWidth="150.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Button fx:id="resetButton" mnemonicParsing="false" text="Reset">
+               <HBox.margin>
+                  <Insets right="18.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="saveButton" mnemonicParsing="false" text="Save Settings" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+   </padding>
+</VBox>

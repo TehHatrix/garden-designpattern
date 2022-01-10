@@ -18,12 +18,12 @@
                   <Insets right="50.0" />
                </StackPane.margin>
             </ImageView>
-            <ImageView fx:id="bird" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+            <ImageView fx:id="animalFly" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
                <StackPane.margin>
                   <Insets left="100.0" top="100.0" />
                </StackPane.margin>
             </ImageView>
-            <ImageView fx:id="cat" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+            <ImageView fx:id="animalGround" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
                <StackPane.margin>
                   <Insets bottom="50.0" left="100.0" />
                </StackPane.margin>
