@@ -15,7 +15,7 @@ public class DarkBlackStripes extends AnimalsDecorator {
         return animals.color() + " color and Dark Black Stripes";
     }
 
-    public Image image() {
+    public Image showStripe() {
         return new Image(getClass().getResourceAsStream("animals/blackstripe/black-stripe.png"));
     }
 
