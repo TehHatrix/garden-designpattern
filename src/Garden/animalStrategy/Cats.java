@@ -6,12 +6,13 @@ public class Cats extends Animal {
 
     /**
      * I am passing the
-     * @param mb in GardenFacade class method setAnimal()
+     * @param "mb" in GardenFacade class method setAnimal()
      */
 
-    public Cats(String mb) {
+    public Cats() {
         description = "Cats";
-        setMb(mb); /* This used to set manually in the previous code version */
+        setMoveBehaviour(new Walk());
+        //setMb(mb); /* This used to set manually in the previous code version */
         image = Image(moveBehaviour.move());
     }
 
