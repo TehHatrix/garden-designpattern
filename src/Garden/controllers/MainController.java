@@ -57,7 +57,9 @@ public class MainController {
 
 //        Animal animal1 = new Birds();
 //        animal1.setMoveBehaviour(new Fly());
+//        System.out.println(animal1);
 //        animal1 = new WhiteStripes(animal1);
+//        System.out.println(animal1);
 //        animal1.setImage();
 //        animalGround.setImage(animal1.getImage());
 
@@ -100,6 +102,7 @@ public class MainController {
 
             gardenFacade.setAnimal_(settings.getChosenAnimal());
             gardenFacade.setAnimalMovingBehavior_(settings.getChosenAnimalBehavior());
+            gardenFacade.decorateAnimal_(settings.getChosenAnimalStripe());
             gardenFacade.getAnimal().setImage();
             if(settings.getChosenAnimalBehavior().equalsIgnoreCase("fly")) {
                 animalGround.setImage(null);

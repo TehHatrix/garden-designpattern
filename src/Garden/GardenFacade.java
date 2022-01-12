@@ -1,6 +1,8 @@
 package Garden;
 
 import Garden.animalDecorator.AnimalsDecorator;
+import Garden.animalDecorator.DarkBlackStripes;
+import Garden.animalDecorator.WhiteStripes;
 import Garden.animalStrategy.*;
 import Garden.seasonsFactory.*;
 import javafx.scene.image.Image;
@@ -66,7 +68,15 @@ public class GardenFacade {
         }
     }
 
-    public void decorateAnimal(AnimalsDecorator animalsDecorator) {
+    public void setAnimalDecorator(Animal animaldecorator){
+        this.animal = animaldecorator;
+    }
+
+    public void decorateAnimal_(String decorator) {
+        switch (decorator) {
+            case "Black" -> setAnimalDecorator(new DarkBlackStripes(animal));
+            case "White" -> setAnimalDecorator(new WhiteStripes(animal));
+        }
 
 
     }
