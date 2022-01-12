@@ -101,8 +101,12 @@ public class MainController {
             gardenFacade.setAnimal_(settings.getChosenAnimal());
             gardenFacade.setAnimalMovingBehavior_(settings.getChosenAnimalBehavior());
             gardenFacade.getAnimal().setImage();
-            animalGround.setImage(gardenFacade.getAnimal().getImage());
-            animalGround.setVisible(true);
+            if(settings.getChosenAnimalBehavior().equalsIgnoreCase("fly")) {
+                animalFly.setImage(gardenFacade.getAnimal().getImage());
+            } else {
+                animalGround.setImage(gardenFacade.getAnimal().getImage());
+                animalGround.setVisible(true);
+            }
 
         } else {
             animalGround.setVisible(false);
