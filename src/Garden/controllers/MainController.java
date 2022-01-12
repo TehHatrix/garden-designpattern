@@ -56,8 +56,8 @@ public class MainController {
         ground.setImage(groundImg);
 
 //        Animal animal1 = new Birds();
-//        animal1.setMoveBehaviour(new Sit());
-//        animal1 = new DarkBlackStripes(animal1);
+//        animal1.setMoveBehaviour(new Fly());
+//        animal1 = new WhiteStripes(animal1);
 //        animal1.setImage();
 //        animalGround.setImage(animal1.getImage());
 
