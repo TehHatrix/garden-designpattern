@@ -93,7 +93,14 @@ public class MainController {
         // TODO: Pras --> Animal Image
         if (settings.isDisplayAnimal()) {
 
-            gardenFacade.setAnimal(settings.getChosenAnimal(), settings.getChosenAnimalBehavior());
+            gardenFacade.setAnimal(settings.getChosenAnimal());
+
+            /**
+             * This is giving me null (whenever manual setBehavior() is not present in Cat/Bird classes),
+             * and I am not sure why
+             * My concern is that, the Cat/Bird class is not getting the moveBehavior properly
+             */
+            gardenFacade.setAnimalMovingBehavior(settings.getChosenAnimalBehavior());
 
 /*
             gardenFacade.setAnimalMovingBehavior(new Sit());

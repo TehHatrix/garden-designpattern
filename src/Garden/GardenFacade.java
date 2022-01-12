@@ -47,17 +47,17 @@ public class GardenFacade {
 
     /**
      * @param animalChoice --> set in Main controller
-     * @param mb --> move behaviour string set by user
+     * @param "mb" --> move behaviour string set by user
      */
-    public void setAnimal(String animalChoice, String mb) {
+    public void setAnimal(String animalChoice) {
 
         /**
          * when I make it like
          * Animal cat = new Cat(), setting the behavior setMoveBehaviour() giving null
          * maybe I am missing something :(
          */
-        Cats cat = new Cats(mb);
-        Birds bird = new Birds(mb);
+        Animal cat = new Cats();
+        Animal bird = new Birds();
 
         switch (animalChoice) {
             case "Cat" -> this.animal = cat;
@@ -77,6 +77,14 @@ public class GardenFacade {
      */
     public void setAnimalMovingBehavior(MoveBehaviour moveBehaviour) {
         this.animal.setMoveBehaviour(moveBehaviour);
+    }
+
+    public void setAnimalMovingBehavior(String moveBehaviour) {
+        switch (moveBehaviour) {
+            case "Walk" -> this.animal.setMoveBehaviour(new Walk());
+            case "Sit" -> this.animal.setMoveBehaviour(new Sit());
+            case "Fly" -> this.animal.setMoveBehaviour(new Fly());
+        }
     }
 
     public Animal getAnimal() {
