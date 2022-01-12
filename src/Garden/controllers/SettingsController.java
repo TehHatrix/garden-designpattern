@@ -93,6 +93,7 @@ public class SettingsController {
             settings.setChosenAnimalStripe((String) animalStripeDropdown.getValue());
             settings.setDisplayTree(treeCheckBox.isSelected());
             settings.setDisplayAnimal(animalCheckBox.isSelected());
+            settings.setChosenAnimalBehavior((String) animalBehaviorDropdown.getValue());
 
             mainController.updateViews();
         });
