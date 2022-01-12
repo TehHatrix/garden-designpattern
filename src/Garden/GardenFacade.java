@@ -45,8 +45,8 @@ public class GardenFacade {
         Animal bird = new Birds();
 
         switch (chosenAnimal) {
-            case "Cat" : setAnimal(cat);
-            case "Bird" : setAnimal(bird);
+            case "Cat" -> setAnimal(cat);
+            case "Bird" -> setAnimal(bird);
         }
     }
 
@@ -60,9 +60,9 @@ public class GardenFacade {
 
     public void setAnimalMovingBehavior_(String moveBehaviour) {
         switch (moveBehaviour) {
-            case "Sit" : setAnimalMovingBehavior(new Sit());
-            case "Walk" : setAnimalMovingBehavior(new Walk());
-            case "Fly" : setAnimalMovingBehavior(new Fly());
+            case "Sit" -> setAnimalMovingBehavior(new Sit());
+            case "Walk" -> setAnimalMovingBehavior(new Walk());
+            case "Fly" -> setAnimalMovingBehavior(new Fly());
         }
     }
 
