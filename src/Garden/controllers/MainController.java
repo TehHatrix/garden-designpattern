@@ -62,18 +62,20 @@ public class MainController {
 //        System.out.println(animal1);
 //        animal1.setImage();
 //        animalGround.setImage(animal1.getImage());
+        Stage settingsWindow = new Stage();
+        try {
+            layoutLoader = new FXMLLoader(getClass().getResource("/Garden/assets/settings.fxml"));
+            layoutLoader.setController(new SettingsController(this));
+            settingsWindow.setScene(new Scene(layoutLoader.load()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        settingsWindow.setTitle("Settings");
 
         settingsButton.setOnAction((actionEvent -> {
-            Stage settingsWindow = new Stage();
-            try {
-                layoutLoader = new FXMLLoader(getClass().getResource("/Garden/assets/settings.fxml"));
-                layoutLoader.setController(new SettingsController(this));
-                settingsWindow.setScene(new Scene(layoutLoader.load()));
-            } catch (IOException e) {
-                e.printStackTrace();
+            if(!settingsWindow.isShowing()){
+                settingsWindow.show();
             }
-            settingsWindow.setTitle("Settings");
-            settingsWindow.show();
         }));
     }
 

@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.layout.VBox;
 
 public class SettingsController {
 
@@ -22,7 +23,12 @@ public class SettingsController {
     @FXML
     private Button saveButton, resetButton;
 
+    @FXML
+    private VBox animalSettingsContainer;
+
     private SettingsSingleton settings;
+
+    private boolean animalSettingsVisibility = false;
 
     public SettingsController(MainController c) {
         mainController = c;
@@ -43,6 +49,9 @@ public class SettingsController {
         animalCheckBox.setSelected(settings.isDisplayAnimal());
         animalBehaviorDropdown.setValue(settings.getDefaultAnimalBehavior());
 
+        // Initialize animal visibility
+        animalSettingsContainer.setVisible(animalCheckBox.isSelected());
+
         // Set all settings item
         seasonDropdown.setItems(FXCollections.observableArrayList(settings.seasons));
         animalDropdown.setItems(FXCollections.observableArrayList(settings.animals));
@@ -58,6 +67,11 @@ public class SettingsController {
             animalBehaviorDropdown.getItems().remove("Walk");
             animalBehaviorDropdown.setValue("Sit");
         }
+
+        animalCheckBox.setOnAction(actionEvent -> {
+            animalSettingsContainer.setVisible(animalCheckBox.isSelected());
+        });
+
 
         animalDropdown.setOnAction(event -> {
             if(animalDropdown.getValue() == "Cat"){
